@@ -150,6 +150,7 @@ testthat::test_that("type_download_srv_table: content of the table, csv", {
   )
 })
 
+# failed
 testthat::test_that("type_download_srv_table: content of the table, txt", {
   shiny::testServer(
     teal.widgets:::type_download_srv_table,
@@ -159,6 +160,7 @@ testthat::test_that("type_download_srv_table: content of the table, txt", {
       session$setInputs(`lpp` = 10)
       session$setInputs(`file_format` = ".txt")
       txt <- read.delim(output$data_download, sep = "")
+      print(txt)
       testthat::expect_equal(
         txt,
         data.frame(
