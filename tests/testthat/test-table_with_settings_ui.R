@@ -236,6 +236,7 @@ testthat::test_that(
   }
 )
 
+# failed
 testthat::test_that(
   "e2e: teal.widgets::table_with_settings: clicking download in an expand modal opens dropdown menu with dwnl settings,
   such as: file type, file name, pagination",
@@ -306,7 +307,7 @@ testthat::test_that(
   "e2e: teal.widgets::table_with_settings: check pagination appearance for .txt and disappearance for .csv
   for the modal on the second button",
   {
-    skip_if_too_deep(5)
+    skip_if_too_deep(4)
     app_driver <- shinytest2::AppDriver$new(
       app_driver_tws(),
       name = "tws",
