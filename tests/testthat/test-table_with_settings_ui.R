@@ -317,9 +317,9 @@ testthat::test_that(
     testthat::expect_false(is_visible("#table_with_settings-modal_downbutton-dwnl", app_driver))
 
     app_driver$click(selector = "#table_with_settings-expand")
-    app_driver$wait_for_idle(timeout = default_idle_timeout)
+    app_driver$wait_for_element_stability()
     app_driver$click(selector = "#table_with_settings-modal_downbutton-dwnl")
-    app_driver$wait_for_idle(timeout = default_idle_timeout)
+    app_driver$wait_for_element_stability()
 
     pagination <-
       "#dropdown-menu-table_with_settings-modal_downbutton-dwnl .paginate-ui .form-group.shiny-input-container"
