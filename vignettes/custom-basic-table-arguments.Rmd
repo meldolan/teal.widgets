@@ -17,7 +17,7 @@ creator in the server function, which has the lowest priority.
 
 The implementation should consist of 5 steps:
 
-1. Adding `basic_table_args` argument to the `tm_t_*` function and then its server function.
+1. Add the `basic_table_args` arguments to the `tm_t_*` function and then its server function.
 The default should be set to
 the `basic_table_args()` function for a single plot.
 and  `list(default = basic_table_args())` multi-table modules.
